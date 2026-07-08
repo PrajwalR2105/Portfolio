@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prajwal R | Software Developer</title>
+  <meta name="description" content="Prajwal R — Software Developer specializing in Java, Spring Boot, MySQL and full-stack web development. Portfolio, projects, and resume." />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Prajwal R | Software Developer" />
+  <meta property="og:description" content="Full-stack developer portfolio — Java, Spring Boot, MySQL, React JS." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (code/data accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span class="loader__bracket">&lt;</span>
+      <span class="loader__name">PR</span>
+      <span class="loader__bracket">/&gt;</span>
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ============ SCROLL PROGRESS BAR ============ -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+  <!-- ============ AMBIENT BACKGROUND (particles + glow) ============ -->
+  <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+  <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo" aria-label="Prajwal R — home">
+        <span class="nav__logo-bracket">&lt;</span>Prajwal<span class="nav__logo-accent">.dev</span><span class="nav__logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home" class="nav__link active-link" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav__link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav__link" data-section="skills">Skills</a></li>
+        <li><a href="#journey" class="nav__link" data-section="journey">Journey</a></li>
+        <li><a href="#projects" class="nav__link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav__link" data-section="certifications">Certs</a></li>
+        <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="assets/resume.pdf" download class="btn btn--ghost btn--sm nav__resume-btn">Resume</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+      <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+
+        <div class="hero__content">
+          <p class="eyebrow reveal-up"><span class="eyebrow__dot"></span> Open to Entry-Level Software Roles</p>
+
+          <h1 class="hero__title reveal-up">
+            Hi, I'm <span class="text-gradient">Prajwal R</span>
+          </h1>
+
+          <h2 class="hero__role reveal-up">
+            <span class="typing-prefix">I build&nbsp;</span><span id="typingText" class="typing-text"></span><span class="typing-cursor">|</span>
+          </h2>
+
+          <p class="hero__desc reveal-up">
+            Motivated, detail-oriented Software Developer with a strong grounding in
+            Java, Spring Boot, MySQL and REST APIs. BE in Computer Science (2024), with
+            hands-on experience shipping full-stack web applications — from
+            relational schema design to clean MVC architecture.
+          </p>
+
+          <div class="hero__actions reveal-up">
+            <a href="assets/resume.pdf" download class="btn btn--primary">
+              <span>Download Resume</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--outline">
+              <span>Let's Talk</span>
+            </a>
+          </div>
+
+          <div class="hero__socials reveal-up" aria-label="Social links">
+            <a href="mailto:prajwalr210502@gmail.com" class="social-icon" aria-label="Email" data-tip="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+            </a>
+            <a href="https://github.com/PrajwalR2105" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub" data-tip="GitHub (placeholder)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/prajwal-r-9844a8239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn" data-tip="LinkedIn (placeholder)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM.5 8.98h8.96V23H.5V8.98ZM8.98 8.98h6.5v1.9h.1c.9-1.6 3.1-3.3 6.4-3.3 6.9 0 8.2 4.4 8.2 10.1V23h-8v-6.4c0-1.5 0-3.5-2.1-3.5s-2.5 1.7-2.5 3.4V23h-8V8.98Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal-up">
+          <div class="code-card">
+            <div class="code-card__bar">
+              <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+              <span class="code-card__filename">developer.js</span>
+            </div>
+            <pre class="code-card__body"><code><span class="tok-key">const</span> <span class="tok-var">developer</span> = {
+  <span class="tok-prop">name</span>: <span class="tok-str">'Prajwal R'</span>,
+  <span class="tok-prop">role</span>: <span class="tok-str">'Software Developer'</span>,
+  <span class="tok-prop">based</span>: <span class="tok-str">'Bengaluru, IN'</span>,
+  <span class="tok-prop">stack</span>: [<span class="tok-str">'Java'</span>, <span class="tok-str">'JDBC'</span>,
+           <span class="tok-str">'MySQL'</span>, <span class="tok-str">'React'</span>],
+  <span class="tok-prop">graduated</span>: <span class="tok-num">2024</span>,
+  <span class="tok-prop">available</span>: <span class="tok-bool">true</span>,
+};</code></pre>
+            <div class="code-card__glow"></div>
+          </div>
+
+          <div class="floating-badge floating-badge--1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            BE Computer Science — 2024
+          </div>
+          <div class="floating-badge floating-badge--2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+            3 Full-Stack Projects
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">About</p>
+        <h2 class="section__title reveal-up">A little about my work</h2>
+
+        <div class="about__grid">
+          <div class="about__photo reveal-up">
+            <div class="about__photo-frame">
+              <img src="images/profile.jpg" alt="Portrait placeholder for Prajwal R" loading="lazy" width="500" height="500" />
+            </div>
+            <div class="about__photo-ring" aria-hidden="true"></div>
+          </div>
+
+          <div class="about__content reveal-up">
+            <p class="about__bio">
+              I'm a motivated, detail-oriented Software Developer with a strong
+              knowledge of Java, JDBC, MySQL, and REST APIs. I completed my
+              Bachelor of Engineering in Computer Science in 2024, and along the
+              way built hands-on experience developing full-stack web
+              applications — from backend business logic to relational schema
+              design.
+            </p>
+            <p class="about__bio">
+              I care about writing clean, maintainable code, following proper
+              MVC architecture, and building backend systems that scale. I'm
+              currently seeking an entry-level Software Developer role where I
+              can keep learning and contribute to real products from day one.
+            </p>
+
+            <div class="about__details">
+              <div class="detail-item">
+                <span class="detail-item__label">Email</span>
+                <a href="mailto:prajwalr210502@gmail.com" class="detail-item__value">prajwalr210502@gmail.com</a>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item__label">Phone</span>
+                <a href="tel:+916361227282" class="detail-item__value">+91 63612 27282</a>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item__label">Location</span>
+                <span class="detail-item__value">Bengaluru, India</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-item__label">Status</span>
+                <span class="detail-item__value">Open to opportunities</span>
+              </div>
+            </div>
+
+            <a href="assets/resume.pdf" download class="btn btn--primary about__cta">
+              <span>Download Full Resume</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats / Achievements strip -->
+        <div class="stats reveal-up">
+          <div class="stat-card">
+            <span class="stat-card__num" data-count="3">0</span><span class="stat-card__plus">+</span>
+            <p class="stat-card__label">Full-Stack Projects</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num" data-count="2">0</span>
+            <p class="stat-card__label">Certifications</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num" data-count="10">0</span><span class="stat-card__plus">+</span>
+            <p class="stat-card__label">Technologies Used</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num" data-count="2024">0</span>
+            <p class="stat-card__label">Graduation Year</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Skills</p>
+        <h2 class="section__title reveal-up">Technologies I work with</h2>
+        <p class="section__subtitle reveal-up">Grounded in Java and relational systems, with practical full-stack exposure.</p>
+
+        <div class="skills-grid">
+
+          <div class="skill-category reveal-up">
+            <div class="skill-category__head">
+              <span class="skill-category__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </span>
+              Programming Languages
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Java</span><span>90%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="90"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>JavaScript</span><span>75%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="75"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>SQL</span><span>80%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="80"></span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal-up">
+            <div class="skill-category__head">
+              <span class="skill-category__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </span>
+              Backend &amp; Java Tech
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Core Java / OOPs</span><span>85%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="85"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>JDBC &amp; Hibernate</span><span>80%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="80"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Servlets / Maven</span><span>70%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="70"></span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal-up">
+            <div class="skill-category__head">
+              <span class="skill-category__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+              </span>
+              Web Development
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>HTML / CSS</span><span>85%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="85"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>React JS</span><span>70%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="70"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>REST APIs</span><span>75%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="75"></span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal-up">
+            <div class="skill-category__head">
+              <span class="skill-category__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+              </span>
+              Database
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>MySQL</span><span>80%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="80"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>MySQL Workbench</span><span>75%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="75"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Schema Design</span><span>75%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="75"></span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal-up">
+            <div class="skill-category__head">
+              <span class="skill-category__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></svg>
+              </span>
+              Tools &amp; Platforms
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Git &amp; GitHub</span><span>80%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="80"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>VS Code / Eclipse</span><span>85%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="85"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Postman</span><span>70%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="70"></span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal-up">
+            <div class="skill-category__head">
+              <span class="skill-category__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+              </span>
+              Soft Skills
+            </div>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Problem Solving</span><span>85%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="85"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Attention to Detail</span><span>85%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="85"></span></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__row"><span>Self-Motivation</span><span>90%</span></div>
+                <div class="skill-bar"><span class="skill-bar__fill" data-percent="90"></span></div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY (Education + Certifications timeline) ============ -->
+    <section class="section" id="journey">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Journey</p>
+        <h2 class="section__title reveal-up">Education &amp; milestones</h2>
+        <p class="section__subtitle reveal-up">No formal work history yet — here's the academic and certification path that got me here.</p>
+
+        <div class="timeline">
+          <div class="timeline__item reveal-up">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">2018 — 2020</span>
+              <h3 class="timeline__title">Vidyanidhi Independent PU College</h3>
+              <p class="timeline__place">Tumkur</p>
+              <p class="timeline__desc">Pre-University Course (PUC) — scored 77%.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item reveal-up">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">2020 — 2024</span>
+              <h3 class="timeline__title">Kalpataru Institute of Technology</h3>
+              <p class="timeline__place">Tiptur</p>
+              <p class="timeline__desc">Bachelor of Engineering — Computer Science &amp; Engineering. CGPA: 6.7.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Projects</p>
+        <h2 class="section__title reveal-up">Things I've built</h2>
+        <p class="section__subtitle reveal-up">A selection of full-stack and Java-based projects.</p>
+
+        <div class="filter-bar reveal-up" role="tablist" aria-label="Filter projects by technology">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="java">Java</button>
+          <button class="filter-btn" data-filter="spring">Spring Boot</button>
+          <button class="filter-btn" data-filter="mysql">MySQL</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal-up" data-tags="java mysql">
+            <div class="project-card__media">
+              <img src="images/project1.png" alt="Food Delivery Website preview placeholder" loading="lazy" width="800" height="500" />
+              <div class="project-card__overlay">
+            
+                <a href="https://github.com/PrajwalR2105" class="icon-btn" aria-label="GitHub repository (placeholder link)" data-tip="Add repo URL">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Food Delivery Website</h3>
+              <p class="project-card__desc">Full-stack food delivery application with user authentication, restaurant browsing, and online ordering, built with an MVC architecture.</p>
+              <ul class="project-card__features">
+                <li>Backend business logic in Core Java &amp; Hibernate</li>
+                <li>Relational schema in MySQL for order management</li>
+                <li>Optimized SQL queries for faster data retrieval</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag">Java</span><span class="tag">JDBC</span><span class="tag">Hibernate</span>
+                <span class="tag">MySQL</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Maven</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-tags="java spring mysql">
+            <div class="project-card__media">
+              <img src="images/project2.png" alt="HourlyRecruit Website backend preview placeholder" loading="lazy" width="800" height="500" />
+              <div class="project-card__overlay">
+              
+                <a href="https://github.com/PrajwalR2105" class="icon-btn" aria-label="GitHub repository (placeholder link)" data-tip="Add repo URL">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">HourlyRecruit Website — Backend</h3>
+              <p class="project-card__desc">Backend for HourlyRecruit TechLabs with secure authorization, authentication, and full CRUD across every section of the site.</p>
+              <ul class="project-card__features">
+                <li>Authorization &amp; authentication for the platform</li>
+                <li>CRUD operations across all site sections</li>
+                <li>API testing workflow using Postman</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">Postman</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-tags="java">
+            <div class="project-card__media">
+              <img src="images/project3.png" alt="Binary to Decimal Converter preview placeholder" loading="lazy" width="800" height="500" />
+              <div class="project-card__overlay">
+              
+                <a href="https://github.com/PrajwalR2105" class="icon-btn" aria-label="GitHub repository (placeholder link)" data-tip="Add repo URL">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Binary to Decimal Converter</h3>
+              <p class="project-card__desc">Java-based utility application for converting between number systems, with careful attention to input validation.</p>
+              <ul class="project-card__features">
+                <li>Number system conversion logic</li>
+                <li>Input validation &amp; error handling</li>
+              </ul>
+              <div class="tag-list">
+                <span class="tag">Java</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Certifications</p>
+        <h2 class="section__title reveal-up">Continued learning</h2>
+
+        <div class="cert-grid">
+          <div class="cert-card reveal-up">
+            <div class="cert-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15l-5.5 3 1-6.5L2 6.9l6.6-.9L12 0l3.4 6 6.6.9-5.5 4.6 1 6.5z"/></svg>
+            </div>
+            <h3 class="cert-card__title">Full Stack Web Development — Java</h3>
+            <p class="cert-card__issuer">Tap Academy</p>
+          </div>
+
+          <div class="cert-card reveal-up">
+            <div class="cert-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15l-5.5 3 1-6.5L2 6.9l6.6-.9L12 0l3.4 6 6.6.9-5.5 4.6 1 6.5z"/></svg>
+            </div>
+            <h3 class="cert-card__title">Full Stack Web Development — Python</h3>
+            <p class="cert-card__issuer">10 Seconds</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Contact</p>
+        <h2 class="section__title reveal-up">Let's build something together</h2>
+        <p class="section__subtitle reveal-up">Open to entry-level Software Developer roles — reach out any time.</p>
+
+        <div class="contact__grid">
+
+          <div class="contact__info reveal-up">
+            <div class="contact-item">
+              <span class="contact-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+              </span>
+              <div>
+                <span class="contact-item__label">Email</span>
+                <a href="mailto:prajwalr210502@gmail.com">prajwalr210502@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div>
+                <span class="contact-item__label">Phone</span>
+                <a href="tel:+916361227282">+91 63612 27282</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <span class="contact-item__label">Location</span>
+                <span>Bengaluru, India</span>
+              </div>
+            </div>
+
+            <div class="map-placeholder">
+              <iframe
+                title="Bengaluru location map"
+                src="https://www.google.com/maps?q=Bengaluru,India&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <form class="contact-form reveal-up" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+              <span class="form-error" id="subjectError"></span>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a bit about the opportunity..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn--primary form-submit">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="form-note">This form is front-end only — connect it to a service like Formspree or your own backend to receive messages.</p>
+            <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="nav__logo">
+          <span class="nav__logo-bracket">&lt;</span>Prajwal<span class="nav__logo-accent">.dev</span><span class="nav__logo-bracket">/&gt;</span>
+        </a>
+        <p>Software Developer building clean, reliable full-stack applications.</p>
+      </div>
+
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer__socials">
+        <h4>Elsewhere</h4>
+        <div class="footer__social-icons">
+          <a href="mailto:prajwalr210502@gmail.com" aria-label="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM.5 8.98h8.96V23H.5V8.98ZM8.98 8.98h6.5v1.9h.1c.9-1.6 3.1-3.3 6.4-3.3 6.9 0 8.2 4.4 8.2 10.1V23h-8v-6.4c0-1.5 0-3.5-2.1-3.5s-2.5 1.7-2.5 3.4V23h-8V8.98Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p>&copy; <span id="year"></span> Prajwal R. All rights reserved.</p>
+      <p class="footer__thanks">Thanks for stopping by ✨</p>
+    </div>
+  </footer>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
